@@ -1,0 +1,41 @@
+<!-- Info Mabar -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <h2>Welcome to UNP Kediri</h2>
+    <input type="button" name="tampil" id="tampil" value="SHOW" />
+    <input type="button" name="hilang" id="hilang" value="HIDE" />
+    <hr />
+    Prodi <input type="text" name="prodi" id="prodi" />
+    <input type="button" name="show_prodi" id="show_prodi" value="Showprodi" />
+    <hr />
+    <div id="alamat">Kampus II Mojoroto</div>
+    <input type="button" name="addr" id="addr" value="Show Address" />
+    <script>
+      $(document).ready(function () {
+        $("#addr").click(function () {
+          var addr = $("#alamat").html();
+          alert("Alamat = " + addr);
+        });
+        $("#show_prodi").click(function () {
+          var prodi = $("#prodi").val();
+          alert("prodi =" + prodi);
+        });
+        $("#tampil").click(function () {
+          $("h2").show();
+        });
+        $("#hilang").click(function () {
+          $("h2").hide();
+        });
+      });
+    </script>
+  </body>
+</html>

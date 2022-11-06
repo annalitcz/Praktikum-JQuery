@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 10px;
+      }
+      .judul {
+        color: red;
+      }
+      img {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="button" id="atas" value="Atas" />
+    <input type="button" id="bawah" value="Bawah" />
+    <input type="button" id="kanan" value="Kanan" />
+    <input type="button" id="kiri" value="Kiri" />
+    <input type="button" id="ganti" value="Ganti Warna Judul" />
+    <br /><br />
+    <h1>api jQuery position & offset</h1>
+    <br /><br />
+    <img src="pp.png" id="mobil" width="200px" />
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("#atas").click(function () {
+          $("#mobil").animate({ top: "-=100px" });
+        });
+
+        $("#bawah").click(function () {
+          $("#mobil").animate({ top: "+=100px" });
+        });
+
+        $("#kanan").click(function () {
+          $("#mobil").animate({ left: "+=100px" });
+        });
+
+        $("#kiri").click(function () {
+          $("#mobil").animate({ left: "-=100px" });
+        });
+
+        $("#ganti").click(function () {
+          $("h1").addClass("judul");
+        });
+      });
+    </script>
+  </body>
+</html>

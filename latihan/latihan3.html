@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="jquery.min.js"></script>
+    <style>
+        body {
+            margin: 15px;
+        }
+
+        img {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Gunakan Keyboard Atas, Bawah, Kanan, Kiri</h3>
+    <br>
+    <img src="pp.png" id="mobil" width="300px">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(document).keydown(function (e) {
+                switch (e.which) {
+                    case 38:    // Keyboard Atas
+                        $("#mobil").finish().animate({
+                            top: "-=150px"
+                        });
+                        break;
+
+                    case 40:    // Keyboard Bawah
+                        $("#mobil").finish().animate({
+                            top: "+=150px"
+                        });
+                        break;
+
+                    case 39:    //Keybaord kanan
+                        $("#mobil").finish().animate({
+                            left: "+=150px"
+                        });
+                        break;
+
+                    case 37:    //Keyboard Kiri
+                        $("#mobil").finish().animate({
+                            left: "-=150px"
+                        });
+                        break;
+
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

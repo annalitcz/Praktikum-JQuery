@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h3>kalkulator dengan jQuery</h3>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+    <input type="button" id="tambah" value="+" />
+    <input type="button" id="kurang" value="-" />
+    <input type="button" id="kali" value="x" />
+    <input type="button" id="bagi" value="/" />
+    <input type="text" id="hasil" />
+
+    <script>
+      $(document).ready(function () {
+        $("#tambah").click(function () {
+          let num1 = Number($("#num1").val());
+          let num2 = Number($("#num2").val());
+          let hasil = num1 + num2;
+          $("#hasil").val(hasil);
+        });
+        $("#kurang").click(function () {
+          let num1 = Number($("#num1").val());
+          let num2 = Number($("#num2").val());
+          let hasil = num1 - num2;
+          $("#hasil").val(hasil);
+        });
+        $("#kali").click(function () {
+          let num1 = Number($("#num1").val());
+          let num2 = Number($("#num2").val());
+          let hasil = num1 * num2;
+          $("#hasil").val(hasil);
+        });
+        $("#bagi").click(function () {
+          let num1 = Number($("#num1").val());
+          let num2 = Number($("#num2").val());
+          let hasil = num1 / num2;
+          $("#hasil").val(hasil);
+        });
+      });
+    </script>
+  </body>
+</html>
